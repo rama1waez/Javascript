@@ -1,2 +1,10 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+import * as readline from 'node:readline/promises';
+import{stdin as input, stdout as output} from 'node:process';
+const userInput = readline.createInterface({input, output});
+
+let vraagNaam = await userInput.question('wat is uw naam?');
+
+
+console.log('welkom in onze website ' +vraagNaam+'.');
+
+process.exit();
